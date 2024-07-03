@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2 } from "lucide-react";
+import { CircleUser, Menu, Globe } from "lucide-react"; // Change icon to Globe
 import { NavLink, Outlet } from "react-router-dom";
 import { navItems } from "../App";
 
@@ -21,7 +21,7 @@ const Layout = () => {
         <MobileNav />
         <UserMenu />
       </header>
-      <main className="flex-grow p-4 overflow-auto">
+      <main className="flex-grow p-4 overflow-auto bg-gray-50"> {/* Update main classNames */}
         <Outlet />
       </main>
     </div>
@@ -34,8 +34,8 @@ const DesktopNav = () => (
       to="/"
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
     >
-      <Package2 className="h-6 w-6" />
-      <span className="sr-only">Acme Inc</span>
+      <Globe className="h-6 w-6" /> {/* Change icon to Globe */}
+      <span className="sr-only">Discover China</span> {/* Update app name */}
     </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
@@ -59,8 +59,8 @@ const MobileNav = () => (
           to="/"
           className="flex items-center gap-2 text-lg font-semibold"
         >
-          <Package2 className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <Globe className="h-6 w-6" /> {/* Change icon to Globe */}
+          <span className="sr-only">Discover China</span> {/* Update app name */}
         </NavItem>
         {navItems.map((item) => (
           <NavItem key={item.to} to={item.to}>
